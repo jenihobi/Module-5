@@ -1,32 +1,42 @@
-# Multilevel Inheritance Example in Python
-
-This Python project demonstrates the concept of **Multilevel Inheritance** to collect and display the **name**, **age**, and **location** of a person.
+# Pandas Program: Create and Display a DataFrame with Custom Index Labels
 
 ## 🎯 Aim
 
-To write a Python program that uses multilevel inheritance to get and display a person’s name, age, and location.
+To create and display a **DataFrame** using the **Pandas** library in Python from a given dictionary, and apply specific index labels to the rows.
+
+---
 
 ## 🧠 Algorithm
 
-1. **Parent Class**  
-   - `__init__(name)` initializes the `name` attribute.  
-   - `getName()` returns the `name`.
+1. **Import Libraries**: Import the required libraries – `pandas` and `numpy`.
+2. **Create Dictionary**: Define a dictionary `exam_data` with keys: `'name'`, `'score'`, `'attempts'`, and `'qualify'`.
+3. **Index Labels**: Create a list of custom index labels called `labels`.
+4. **Create DataFrame**: Use `pd.DataFrame()` to create the DataFrame by passing the dictionary and index labels.
+5. **Display Output**: Display the DataFrame using `print()` or by simply calling the DataFrame variable.
 
-2. **Child Class (inherits Parent)**  
-   - `__init__(name, age)` initializes `name` using `super()` and adds `age`.  
-   - `getAge()` returns the `age`.
+---
 
-3. **Grandchild Class (inherits Child)**  
-   - `__init__(name, age, location)` initializes `name` and `age` using `super()` and adds `location`.  
-   - `getLocation()` returns the `location`.
+## 💻 Program
+```
+import pandas as pd 
+import numpy as np 
+exam_data  = {'name': ['Anastasia', 'Dima', 'Katherine', 'James', 'Emily', 'Michael', 'Matthew', 'Laura', 
+'Kevin', 'Jonas'], 
+'score': [12.5, 9, 16.5, np.nan, 9, 20, 14.5, np.nan, 8, 19], 
+'attempts': [1, 3, 2, 3, 2, 3, 1, 1, 2, 1], 
+'qualify': ['yes', 'no', 'yes', 'no', 'no', 'yes', 'yes', 'no', 'no', 'yes']} 
+labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'] 
+df = pd.DataFrame(exam_data , index=labels) 
+print(df)
+```
 
-4. **Input & Output**  
-   - Take user input for name, age, and location.  
-   - Create an instance of `Grandchild`.  
-   - Print all details using class methods.
 
-## Program
-Add code here
+## Output
 
-## Sample Output
+![image](https://github.com/user-attachments/assets/636a2baf-f53d-41ab-bbb9-088c063ab397)
+
+
+## Result
+
+Thus,the program has been executed successfully.
 
