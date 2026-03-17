@@ -1,29 +1,32 @@
-# Destructor in Python
+# # NumPy Program: Find Indices Where Elements in Array x are Greater Than or Equal to Corresponding Elements in Array y
 
-This project demonstrates how to implement a **destructor** in Python using a simple class.
-
-## 🚀 Overview
-
-The program defines a class `Demo` with:
-
-- A **constructor** `__init__` that initializes an instance variable and prints a message.
-- A **destructor** `__del__` that prints a message when the object is destroyed.
+## 🎯 Aim
+To write a Python program using **NumPy** that finds the indices where elements in array `x` are greater than or equal to their corresponding elements in array `y`.
 
 ## 🧠 Algorithm
+1. **Import NumPy**: Import the NumPy library.
+2. **Define Arrays**: Define two NumPy arrays, `x` and `y`, with the same shape (i.e., same number of elements).
+3. **Use Boolean Indexing**: 
+   - `x > y` gives a boolean array where elements of `x` are greater than `y`.
+   - `x == y` gives a boolean array where elements of `x` are equal to `y`.
+4. **Find Indices**: Use `np.where()` to get the indices where the conditions `x >= y` are satisfied.
+5. **Print Indices**: Print the indices where the condition holds true.
 
-1. Define a class named `Demo`.
-2. Inside the class, define the `__init__` method:
-   - Initialize an instance variable `status` with the value `"Alive"`.
-   - Print the value of `status`.
-3. Define the `__del__` method:
-   - Print a message indicating the object is being destroyed.
-4. Outside the class:
-   - Create an instance of the `Demo` class.
-   - Delete the object using the `del` keyword.
-## Program
-Add code Here
+## 🧾 Program
 
-## 🧪 Output
+```
+import numpy as np
+
+x=np.array(eval(input()))
+y=np.array(eval(input()))
+gt=np.where(x>y)
+eq=np.where(x==y)
+print(gt)
+print(eq)
+
+```
+## Output
+<img width="1252" height="262" alt="image" src="https://github.com/user-attachments/assets/1d59a348-f752-425a-b472-f6fe06aacf70" />
 
 ## Result
-
+The program successfully finds and prints the indices where elements of x are greater than or equal to the corresponding elements in y. The result matches the expected output.
